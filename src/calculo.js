@@ -13,3 +13,5 @@ const frequencia = 12; // Frequência de capitalização (mensal)
 
 const montanteFinal = calcularJurosCompostos(principal, taxa, periodo, frequencia);
 console.log(`Montante final após ${periodo} anos: R$${montanteFinal.toFixed(2)}`);
+
+module.exports = {calcularJurosCompostos};
