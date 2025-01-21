@@ -26,3 +26,15 @@ test('calcula o montante corretamente com taxa de juros zero', () => {
   expect(montanteFinal).toBeCloseTo(montanteEsperado, 2);
 });
 
+// Teste para calcular o montante com capital inicial zero
+test('calcula o montante corretamente com capital inicial zero', () => {
+  const principal = 0; // Capital inicial
+  const taxa = 0.05; // Taxa de juros anual (5%)
+  const periodo = 10; // Período em anos
+  const frequencia = 12; // Frequência de capitalização (mensal)
+
+  const montanteEsperado = 0;
+  const montanteFinal = calcularJurosCompostos(principal, taxa, periodo, frequencia);
+
+  expect(montanteFinal).toBeCloseTo(montanteEsperado, 2);
+});
